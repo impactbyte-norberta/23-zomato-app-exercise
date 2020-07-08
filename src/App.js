@@ -2,6 +2,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+import Registration from './pages/Registration/Registration';
 import Login from './pages/Login/Login';
 import Home from './pages/Home/Home';
 
@@ -14,6 +15,9 @@ function App() {
         <Provider store={store}>
             <Router>
                 <Switch>
+                    <Route exact path='/'>
+                        <Registration />
+                    </Route>
                     <Route exact path='/login'>
                         <Login />
                     </Route>
